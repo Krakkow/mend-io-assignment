@@ -23,6 +23,10 @@ public class WebDriverUtils {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
+    public boolean isVisible(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
+    }
+
     public WebElement findElement(By locator) {
         return driver.findElement(locator);
     }
@@ -54,6 +58,10 @@ public class WebDriverUtils {
 
     public String getTextFromElement(By locator) {
         return waitUntilVisible(locator).getText();
+    }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
     }
     
 }
