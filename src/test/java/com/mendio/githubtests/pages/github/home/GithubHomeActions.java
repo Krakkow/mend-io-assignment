@@ -3,25 +3,33 @@ package com.mendio.githubtests.pages.github.home;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class GithubHomeActions {
+import com.mendio.githubtests.utils.WebDriverUtils;
+
+public class GitHubHomeActions {
 
     private WebDriver driver;
+    private WebDriverUtils utils;
 
-    public GithubHomeActions(WebDriver driver) {
+    public GitHubHomeActions(WebDriver driver) {
         this.driver = driver;
+        this.utils = new WebDriverUtils(driver);
     }
 
     public void openHomePage() {
         driver.get("https://github.com");
     }
 
-    public String getTitle() {
-        return driver.getTitle();
-    }
-
     public boolean isSignInLinkVisible() {
-        WebElement signInLink = driver.findElement(GitHubHomeElements.SIGN_IN_LINK);
+        WebElement signInLink = driver.findElement(GitHubHomePage.SIGN_IN_LINK);
         return signInLink.isDisplayed();
     }
+
+    public void openSearch() {
+        utils.click(GitHubHomePage.SEARCH_INPUT_BUTTON);
+    }
+
+    public void searchFor(String searchInput) {
+        utils.typeAndSubmit(GitHubHomePage.SEARCH_INPUT, searchInput);
+        }
+    }
     
-}
