@@ -20,8 +20,12 @@ public class GitHubHomeActions {
     }
 
     public boolean isSignInLinkVisible() {
-        WebElement signInLink = driver.findElement(GitHubHomePage.SIGN_IN_LINK);
+        WebElement signInLink = utils.findElement(GitHubHomePage.SIGN_IN_LINK);
         return signInLink.isDisplayed();
+    }
+
+    public void clickOnSignIn() {
+        utils.click(GitHubHomePage.SIGN_IN_LINK);
     }
 
     public void openSearch() {

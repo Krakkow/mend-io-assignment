@@ -17,16 +17,16 @@ public class GitHubSearchResultsActions {
     }
 
     public boolean hasResults(){
-       List<WebElement> results = driver.findElements(GitHubSearchResultsPage.RESULT_ITEMS);
+       List<WebElement> results = utils.findElements(GitHubSearchResultsPage.RESULT_ITEMS);
        return !results.isEmpty(); 
     }
 
     public int getResultsCount() {
-        return driver.findElements(GitHubSearchResultsPage.RESULT_ITEMS).size();
+        return utils.findElements(GitHubSearchResultsPage.RESULT_ITEMS).size();
     }
 
     public List<String> getRepositoryNames() {
-        List<WebElement> results = driver.findElements(GitHubSearchResultsPage.RESULT_ITEMS);
+        List<WebElement> results = utils.findElements(GitHubSearchResultsPage.RESULT_ITEMS);
         return results.stream().map(WebElement::getText).toList();
     }
 

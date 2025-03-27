@@ -1,6 +1,7 @@
 package com.mendio.githubtests.utils;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,10 @@ public class WebDriverUtils {
 
     public WebElement findElement(By locator) {
         return driver.findElement(locator);
+    }
+
+    public List<WebElement> findElements(By locator) {
+        return driver.findElements(locator);
     }
 
     public void click(By locator) {
