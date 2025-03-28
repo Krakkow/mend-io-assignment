@@ -19,7 +19,7 @@ public class GitHubSignInActions {
     }
 
     public boolean isSignInFormVisible() {
-        return utils.isVisible(GitHubSignInPage.USERNAME) && utils.isVisible(GitHubSignInPage.PASSWORD) && utils.isVisible(GitHubSignInPage.SIGN_IN_BUTTON);
+        return utils.doesElementExist(GitHubSignInPage.USERNAME) && utils.doesElementExist(GitHubSignInPage.PASSWORD) && utils.doesElementExist(GitHubSignInPage.SIGN_IN_BUTTON);
     }
 
     public void failSignIn(String username, String password) {

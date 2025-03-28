@@ -31,6 +31,9 @@ public class GitHubSearchResultsActions {
     }
 
     public String getHeaderText() {
+        if(!utils.doesElementExist(GitHubSearchResultsPage.RESULT_HEADER)){
+            return "No results found";
+        }
         return utils.getTextFromElement(GitHubSearchResultsPage.RESULT_HEADER);
     }
 

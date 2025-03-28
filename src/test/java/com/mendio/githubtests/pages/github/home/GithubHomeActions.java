@@ -25,7 +25,11 @@ public class GitHubHomeActions {
     }
 
     public void clickOnSignIn() {
-        utils.click(GitHubHomePage.SIGN_IN_LINK);
+        if (utils.doesElementExist(GitHubHomePage.SIGN_IN_LINK)) {
+            utils.click(GitHubHomePage.SIGN_IN_LINK);
+        } else {
+            throw new IllegalStateException("Sign In link is not visible");
+        }
     }
 
     public void openSearch() {

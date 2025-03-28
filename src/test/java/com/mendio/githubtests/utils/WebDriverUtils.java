@@ -31,6 +31,10 @@ public class WebDriverUtils {
         return driver.findElement(locator);
     }
 
+    public boolean doesElementExist(By locator){
+        return !driver.findElements(locator).isEmpty();
+    }
+
     public List<WebElement> findElements(By locator) {
         return driver.findElements(locator);
     }

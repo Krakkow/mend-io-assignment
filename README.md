@@ -37,7 +37,7 @@ This project is a Java-based automation suite. It validates 4 core MVP capabilit
 
 ---
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 1. **Clone the repo**
    git clone https://github.com/your-username/mendio-assignment.git
