@@ -34,3 +34,6 @@ release.properties
 
 # VS Code
 .vscode/
+
+# Reports
+test-output/

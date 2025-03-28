@@ -5,7 +5,7 @@ import java.util.concurrent.CompletableFuture;
 
 import org.json.JSONObject;
 import org.testng.annotations.Test;
-
+import com.mendio.githubtests.reports.ExtentTestManager;
 import com.mendio.githubtests.utils.RestUtils;
 import static org.testng.Assert.assertTrue;
 
@@ -27,6 +27,7 @@ public class GitHubApiSearchTest {
     }
 @Test
     public void runConcurrentSearchesUsingApi() {
+        ExtentTestManager.getTest().info("Testing GitHub API In Concurrency");
         List<String> queries = List.of("selenium","junit","playwright","testng","restassured");
         System.out.println("Searching GitHub for repositories concurrently...");
 

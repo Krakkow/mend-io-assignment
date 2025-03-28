@@ -35,6 +35,16 @@
     <artifactId>json</artifactId>
     <version>20230227</version>
 </dependency>
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.1</version>
+</dependency>
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports-testng-adapter</artifactId>
+    <version>1.2.2</version>
+</dependency>
   </dependencies>
 
   <build>
