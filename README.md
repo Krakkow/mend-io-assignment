@@ -4,7 +4,7 @@ This project is a Java-based automation suite. It validates 4 core MVP capabilit
 
 ## Tech Stack
 
-- Java 17
+- Java 24
 - Selenium WebDriver
 - TestNG
 - RestAssured (for API validation)
